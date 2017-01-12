@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Angular QuickStart</title>
+
+<head>
+    <title>Otomasyon</title>
     <meta charset="UTF-8">
+    <base href="/">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles.css">
 
@@ -14,11 +16,25 @@
 
     <script src="systemjs.config.js"></script>
     <script>
-      System.import('app').catch(function(err){ console.error(err); });
+        System.config({
+            defaultJSExtensions: true,
+            packages: {
+                "angular2-jwt": {
+                    "defaultExtension": "js"
+                }
+            },
+            map: {
+                "angular2-jwt": "node_modules/angular2-jwt/angular2-jwt"
+            }
+        });
+        System.import('app').catch(function(err) {
+            console.error(err);
+        });
     </script>
-  </head>
+</head>
 
-  <body>
+<body>
     <my-app>Loading AppComponent content here ...</my-app>
-  </body>
+</body>
+
 </html>
