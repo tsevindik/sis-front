@@ -1,9 +1,53 @@
-<div>
-    <div class="home jumbotron centered">
-        <h1>Welcome to the angular2 authentication sample!</h1>
-        <h2 *ngIf="jwt">Your JWT is:</h2>
-        <pre *ngIf="jwt" class="jwt"><code>{{ jwt }}</code></pre>
-        <pre *ngIf="jwt" class="jwt"><code>{{ decodedJwt | json }}</code></pre>
-        <p><a class="btn btn-primary btn-lg" role="button" (click)="logout()">Logout</a></p>
+<div id="wrapper" [ngClass]="{'active': isClassVisible }">
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <div class="navbar-brand">
+                    <a id="menu-toggle" href="javascript:;" class="btn-menu toggle" (click)="isClassVisible = !isClassVisible;">
+                        <i class="fa-left fa fa-bars"></i>
+                    </a>
+                    <a href="javascript:;">Project name</a>
+                </div>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="javascript:;">Home</a></li>
+                    <li><a href="javascript:;">Home</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+
+                    <li>
+                        <a role="button" *ngIf="isLogin" (click)="logout()"><i class="fa fa-sign-out"></i> Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div id="sidebar-wrapper">
+        <nav id="spy">
+            <ul class="sidebar-nav nav">
+                <li class="sidebar-brand">
+                    <a href="#home"><span class="fa fa-home solo">Home</span></a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div id="page-content-wrapper">
+        <div class="page-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="panel panel-danger">
+                            <div class="panel-heading">
+                                Panel 1
+                            </div>
+                            <div class="panel-body">
+                                <pre *ngIf="jwt" class="jwt"><code>{{ decodedJwt | json }}</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

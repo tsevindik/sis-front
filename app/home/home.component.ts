@@ -2,8 +2,7 @@ import { Component } from '@angular/core';
 import { Http } from '@angular/http';
 import { Router } from '@angular/router';
 import { AuthHttp, JwtHelper } from 'angular2-jwt';
-import { AuthGuard } from '../common/auth.guards';
-
+import { AuthGuard } from '../_guards/index';
 @Component({
   moduleId: module.id,
   selector: 'home',
@@ -25,7 +24,6 @@ export class HomeComponent {
     this.jwt = localStorage.getItem('id_token');
     this.decodedJwt = this.JwtHelper.decodeToken(this.jwt);
     this.isLogin = this.hasToken.canActivate();
-    console.log(window);
   }
   logout() {
     localStorage.removeItem('id_token');
