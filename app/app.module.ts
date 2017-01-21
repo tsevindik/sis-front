@@ -6,10 +6,12 @@ import { RouterModule } from '@angular/router';
 import { AuthGuard, LoginGuard } from './_guards/index';
 import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
+import { CollapseModule } from 'ng2-bootstrap';
 import { ToastrModule } from 'toastr-ng2';
 import { AppComponent }  from './app.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent} from './home/home.component';
+import { UniversityConfig } from './_components/index';
 import { routes } from './app.routes';
 @NgModule({
   imports: [
@@ -19,12 +21,14 @@ import { routes } from './app.routes';
     RouterModule.forRoot(routes, {
       useHash: true
     }),
-    ToastrModule.forRoot(), // ToastrModule added
+    ToastrModule.forRoot(), 
+    CollapseModule.forRoot()
   ],
   declarations: [
     AppComponent,
     LoginComponent,
-    HomeComponent 
+    HomeComponent,
+    UniversityConfig 
   ],
   providers: [
     { provide: APP_BASE_HREF, useValue: '/' },

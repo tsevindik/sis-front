@@ -27,7 +27,7 @@ export class HomeComponent {
     this.decodedJwt = this.JwtHelper.decodeToken(this.jwt);
     this.isLogin = this.hasToken.canActivate();
 
-    this.toastrService.success('Hello world!', 'Toastr fun!');
+    // this.toastrService.success('Hello world!', 'Toastr fun!');
 
   }
   logout() {

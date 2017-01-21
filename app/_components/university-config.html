@@ -1,0 +1,12 @@
+<div class="well">
+    <div class="page-header">
+        <h4>Managing of University</h4>
+    </div>
+</div>
+
+<button type="button" class="btn btn-primary" (click)="isCollapsed = !isCollapsed">Toggle collapse
+</button>
+<br>
+<div (collapsed)="collapsed($event)" (expanded)="expanded($event)" [collapse]="isCollapsed" class="card card-block card-header">
+    <div class="well well-lg">Some content</div>
+</div>
