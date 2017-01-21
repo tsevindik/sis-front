@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 @Component({
   moduleId: module.id,
   selector: 'university-config',
@@ -6,9 +6,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UniversityConfig implements OnInit {
   constructor() { }
-
-  ngOnInit() { }
-
+  
+  universityName = 'University of Wissen';
+  universityNameBoolean = false;
+  universityLanguageBoolean = false;
   public isCollapsed:boolean = false;
  
   public collapsed(event:any):void {

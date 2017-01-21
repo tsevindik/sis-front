@@ -6,7 +6,7 @@ import { RouterModule } from '@angular/router';
 import { AuthGuard, LoginGuard } from './_guards/index';
 import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
-import { CollapseModule } from 'ng2-bootstrap';
+import { CollapseModule, TooltipModule } from 'ng2-bootstrap';
 import { ToastrModule } from 'toastr-ng2';
 import { AppComponent }  from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -22,7 +22,8 @@ import { routes } from './app.routes';
       useHash: true
     }),
     ToastrModule.forRoot(), 
-    CollapseModule.forRoot()
+    CollapseModule.forRoot(),
+    TooltipModule.forRoot()
   ],
   declarations: [
     AppComponent,
