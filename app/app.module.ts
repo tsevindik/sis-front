@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AUTH_PROVIDERS } from 'angular2-jwt';
 import { APP_BASE_HREF } from '@angular/common';
 import { RouterModule } from '@angular/router';
+
+import {TranslateModule} from 'ng2-translate';
 import { AuthGuard, LoginGuard } from './_guards/index';
 import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
@@ -23,7 +25,8 @@ import { routes } from './app.routes';
     }),
     ToastrModule.forRoot(), 
     CollapseModule.forRoot(),
-    TooltipModule.forRoot()
+    TooltipModule.forRoot(),
+    TranslateModule.forRoot()
   ],
   declarations: [
     AppComponent,

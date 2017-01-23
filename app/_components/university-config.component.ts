@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'university-config',
   templateUrl: 'university-config.html'
 })
-export class UniversityConfig implements OnInit {
+export class UniversityConfig {
   constructor() { }
   
   universityName = 'University of Wissen';
