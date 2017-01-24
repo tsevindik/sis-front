@@ -2,5 +2,15 @@
     "HOME": {
         "TITLE": "Merhaba",
         "SELECT": "Change Dil"
+    },
+    "university": {
+        "edit": {
+            "warning": "  Üniversitenin resmi ismini(<i>University of Wissen</i>), <strong>degistirebilirsiniz</strong>"
+        }
+    },
+    "login": {
+        "messages": {
+            "succes": "giris basarili"
+        }
     }
 }

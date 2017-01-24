@@ -17,11 +17,8 @@ export class LoginComponent {
   public http: Http,
   private toastrService: ToastrService
   ) { }
-
   login() {
-
     this.loading = true;
-
     let body = JSON.stringify({ username: this.model.username, password: this.model.password });
     this.http.post(AppInfos.API_ENDPOINT + 'auth/authenticate/', body , { headers: contentHeaders })
       .subscribe(

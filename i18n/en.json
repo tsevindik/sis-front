@@ -2,5 +2,15 @@
     "HOME": {
         "TITLE": "Hello Angular 2 with ng2-translate!",
         "SELECT": "Change language"
+    },
+    "university": {
+        "edit": {
+            "warning": " You can <strong>change</strong> the official name of university (<i>University of Wissen</i>)"
+        }
+    },
+    "login": {
+        "messages": {
+            "succes": "Login is successful"
+        }
     }
 }
