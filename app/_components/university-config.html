@@ -14,7 +14,7 @@
                 <div class="col-lg-11">
                     <div *ngIf="!universityNameBoolean">
                         <span class="lead">
-                            <strong>{{ universityName }}</strong> 
+                            <strong>{{ universityNameVal }}</strong> 
                         </span>
                         <span class="help-block pull-right" [innerHTML]="'university.edit.warning' | translate">
                         </span>
@@ -24,7 +24,7 @@
                             <div class="form-group">
                                 <label for="inputEmail3" class="col-sm-2 control-label">Name</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="universityName" required value="{{universityName}}">
+                                    <input type="text" class="form-control" #universityName (keyup.enter)="changeUniversityName(universityName.value);universityNameBoolean = !universityNameBoolean" required [value]="universityNameVal">
                                     <p class="help-block text-center">Click Enter to change</p>
                                 </div>
                             </div>
@@ -33,34 +33,11 @@
                 </div>
             </div>
         </div>
-        <div class="well">
-            <div class="row">
-                <div class="col-lg-1">
-                    <button class="btn btn-default btn-sm" tooltip="Edit" placement="left" (click)="universityLanguageBoolean = !universityLanguageBoolean">
-                        <i class="fa fa-edit fa-lg" *ngIf="!universityLanguageBoolean"></i>
-                        <i class="fa fa-angle-left fa-lg" *ngIf="universityLanguageBoolean"></i>
-                    </button>
-                </div>
-                <div class="col-lg-11">
-                    <div *ngIf="!universityLanguageBoolean">
-                        <span class="lead">
-                            <strong>{{ universityName }}</strong> 
-                        </span>
-                        <span class="help-block pull-right">
-                            You can <strong>change</strong> the name of university (<i>University of Wissen</i>)
-                            and the language of university (<i>English</i>)
-                        </span>
-                        <select name="" id="" class="form-control"></select>
-                    </div>
-                    <div *ngIf="universityLanguageBoolean">
-
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 </div>
-
+<pre>
+{{universityInfosVal | json}}
+</pre>
 <!--
 <button type="button" class="btn btn-primary" (click)="isCollapsed = !isCollapsed">Toggle collapse
 </button>

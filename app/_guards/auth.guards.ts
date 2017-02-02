@@ -3,7 +3,7 @@ import { Router, CanActivate } from '@angular/router';
 import { tokenNotExpired } from 'angular2-jwt';
 @Injectable()
 export class AuthGuard implements CanActivate {
-  constructor(private router: Router) {}
+  constructor(private router: Router) { }
   public canActivate() {
     if (tokenNotExpired()) {
       return true;
